@@ -1,0 +1,15 @@
+C:\COMP1002-2025\COMP1002-2025\lab-b\bin\Debug\net9.0\lab-b.exe
+C:\COMP1002-2025\COMP1002-2025\lab-b\bin\Debug\net9.0\lab-b.deps.json
+C:\COMP1002-2025\COMP1002-2025\lab-b\bin\Debug\net9.0\lab-b.runtimeconfig.json
+C:\COMP1002-2025\COMP1002-2025\lab-b\bin\Debug\net9.0\lab-b.dll
+C:\COMP1002-2025\COMP1002-2025\lab-b\bin\Debug\net9.0\lab-b.pdb
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.GeneratedMSBuildEditorConfig.editorconfig
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.AssemblyInfoInputs.cache
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.AssemblyInfo.cs
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.csproj.CoreCompileInputs.cache
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.sourcelink.json
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.dll
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\refint\lab-b.dll
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.pdb
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\lab-b.genruntimeconfig.cache
+C:\COMP1002-2025\COMP1002-2025\lab-b\obj\Debug\net9.0\ref\lab-b.dll
