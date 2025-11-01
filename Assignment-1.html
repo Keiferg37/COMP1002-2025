@@ -1,0 +1,408 @@
+<!--Assignment 1 PizzaHTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HTML Pizza Company - Order Your Perfect Pizza</title>
+    <style>
+        /* Basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        main {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        fieldset {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #d32f2f;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            color: #d32f2f;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .inline-label {
+            display: inline;
+            margin-left: 5px;
+        }
+        .button-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 12px 30px;
+            margin: 0 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"] {
+            background-color: #d32f2f;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #757575;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .pizza-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pizza-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .price-range {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .checkbox-group,
+        .radio-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>🍕 The HTML Pizza Company</h1>
+        <p>Crafting Perfect Pizzas Since 2025</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Welcome Section with Image -->
+        <section class="pizza-image">
+            <p>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=400&fit=crop" 
+                     alt="Delicious pizza with melted cheese, pepperoni, and fresh basil on a wooden board" 
+                     width="800" 
+                     height="400" />
+            </p>
+            <p>Welcome to The HTML Pizza Company! Fill out the form below to order your perfect pizza. We use only the freshest ingredients and deliver hot, delicious pizzas right to your door.</p>
+        </section>
+
+        <!-- Pizza Order Form -->
+        <form action="process-order.php" method="post" id="pizzaOrderForm">
+            
+            <!-- Customer Information Section -->
+            <fieldset>
+                <legend>Customer Information</legend>
+                
+                <label for="customerName">Full Name: <span style="color: red;">*</span></label>
+                <input type="text" id="customerName" name="customerName" required placeholder="John Doe">
+                
+                <label for="customerEmail">Email Address: <span style="color: red;">*</span></label>
+                <input type="email" id="customerEmail" name="customerEmail" required placeholder="john@example.com">
+                
+                <label for="customerPhone">Phone Number: <span style="color: red;">*</span></label>
+                <input type="tel" id="customerPhone" name="customerPhone" required placeholder="(555) 123-4567" pattern="[\(]?[0-9]{3}[\)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}">
+                
+                <label for="customerAddress">Delivery Address:</label>
+                <textarea id="customerAddress" name="customerAddress" rows="3" placeholder="123 Main Street, Apt 4B, City, State ZIP"></textarea>
+            </fieldset>
+
+            <!-- Order Details Section -->
+            <fieldset>
+                <legend>Order Details</legend>
+                
+                <label for="numberOfPizzas">Number of Pizzas: <span style="color: red;">*</span></label>
+                <input type="number" id="numberOfPizzas" name="numberOfPizzas" min="1" max="20" value="1" required>
+                
+                <!-- Pizza Size Selection -->
+                <label>Pizza Size (Number of Slices): <span style="color: red;">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="sizeSmall" name="pizzaSize" value="small" required>
+                    <label for="sizeSmall" class="inline-label">Small (4 slices - 10")</label><br>
+                    
+                    <input type="radio" id="sizeMedium" name="pizzaSize" value="medium" checked>
+                    <label for="sizeMedium" class="inline-label">Medium (6 slices - 12")</label><br>
+                    
+                    <input type="radio" id="sizeLarge" name="pizzaSize" value="large">
+                    <label for="sizeLarge" class="inline-label">Large (8 slices - 14")</label><br>
+                    
+                    <input type="radio" id="sizeXLarge" name="pizzaSize" value="xlarge">
+                    <label for="sizeXLarge" class="inline-label">Extra Large (10 slices - 16")</label>
+                </div>
+
+                <!-- Pizza Shape Selection -->
+                <label for="pizzaShape">Pizza Shape:</label>
+                <select id="pizzaShape" name="pizzaShape" required>
+                    <option value="">-- Select a shape --</option>
+                    <optgroup label="Traditional">
+                        <option value="round" selected>Round (Classic)</option>
+                        <option value="square">Square (Sicilian Style)</option>
+                    </optgroup>
+                    <optgroup label="Specialty">
+                        <option value="heart">Heart-Shaped (Perfect for dates!)</option>
+                        <option value="rectangle">Rectangle (Party Style)</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+
+            <!-- Crust Type Section -->
+            <fieldset>
+                <legend>Crust Selection</legend>
+                
+                <label>Choose Your Crust: <span style="color: red;">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="crustThin" name="crustType" value="thin" required>
+                    <label for="crustThin" class="inline-label">Thin & Crispy</label><br>
+                    
+                    <input type="radio" id="crustRegular" name="crustType" value="regular" checked>
+                    <label for="crustRegular" class="inline-label">Regular Hand-Tossed</label><br>
+                    
+                    <input type="radio" id="crustDeep" name="crustType" value="deep">
+                    <label for="crustDeep" class="inline-label">Deep Dish (Chicago Style)</label><br>
+                    
+                    <input type="radio" id="crustStuffed" name="crustType" value="stuffed">
+                    <label for="crustStuffed" class="inline-label">Stuffed Crust (Cheese-filled)</label><br>
+                    
+                    <input type="radio" id="crustGlutenFree" name="crustType" value="glutenfree">
+                    <label for="crustGlutenFree" class="inline-label">Gluten-Free</label><br>
+                    
+                    <input type="radio" id="crustCauliflower" name="crustType" value="cauliflower">
+                    <label for="crustCauliflower" class="inline-label">Cauliflower Crust (Low-carb)</label>
+                </div>
+            </fieldset>
+
+            <!-- Sauce and Cheese Section -->
+            <fieldset>
+                <legend>Sauce & Cheese</legend>
+                
+                <label for="sauceType">Select Your Sauce:</label>
+                <select id="sauceType" name="sauceType" required>
+                    <option value="tomato" selected>Traditional Tomato</option>
+                    <option value="whitesauce">Creamy White Sauce</option>
+                    <option value="pesto">Basil Pesto</option>
+                    <option value="bbq">BBQ Sauce</option>
+                    <option value="buffalo">Buffalo Sauce</option>
+                    <option value="nosaucc">No Sauce</option>
+                </select>
+                
+                <label for="cheeseAmount">Cheese Amount:</label>
+                <div class="price-range">
+                    <span>Light</span>
+                    <input type="range" id="cheeseAmount" name="cheeseAmount" min="1" max="5" value="3" step="1">
+                    <span>Extra</span>
+                    <output for="cheeseAmount" id="cheeseOutput">3</output>
+                </div>
+                
+                <label for="cheeseType">Type of Cheese:</label>
+                <select id="cheeseType" name="cheeseType">
+                    <option value="mozzarella" selected>Mozzarella</option>
+                    <option value="cheddar">Cheddar</option>
+                    <option value="parmesan">Parmesan</option>
+                    <option value="mixed">Four Cheese Blend</option>
+                    <option value="vegan">Vegan Cheese</option>
+                </select>
+            </fieldset>
+
+            <!-- Toppings Section -->
+            <fieldset>
+                <legend>Toppings (Select All That Apply)</legend>
+                
+                <h4>Meat Toppings:</h4>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="toppingPepperoni" name="toppings" value="pepperoni">
+                    <label for="toppingPepperoni" class="inline-label">Pepperoni</label><br>
+                    
+                    <input type="checkbox" id="toppingSausage" name="toppings" value="sausage">
+                    <label for="toppingSausage" class="inline-label">Italian Sausage</label><br>
+                    
+                    <input type="checkbox" id="toppingBacon" name="toppings" value="bacon">
+                    <label for="toppingBacon" class="inline-label">Bacon</label><br>
+                    
+                    <input type="checkbox" id="toppingHam" name="toppings" value="ham">
+                    <label for="toppingHam" class="inline-label">Ham</label><br>
+                    
+                    <input type="checkbox" id="toppingChicken" name="toppings" value="chicken">
+                    <label for="toppingChicken" class="inline-label">Grilled Chicken</label><br>
+                    
+                    <input type="checkbox" id="toppingBeef" name="toppings" value="beef">
+                    <label for="toppingBeef" class="inline-label">Ground Beef</label>
+                </div>
+
+                <h4>Vegetable Toppings:</h4>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="toppingMushrooms" name="toppings" value="mushrooms">
+                    <label for="toppingMushrooms" class="inline-label">Mushrooms</label><br>
+                    
+                    <input type="checkbox" id="toppingOnions" name="toppings" value="onions">
+                    <label for="toppingOnions" class="inline-label">Onions</label><br>
+                    
+                    <input type="checkbox" id="toppingPeppers" name="toppings" value="peppers">
+                    <label for="toppingPeppers" class="inline-label">Green Peppers</label><br>
+                    
+                    <input type="checkbox" id="toppingOlives" name="toppings" value="olives">
+                    <label for="toppingOlives" class="inline-label">Black Olives</label><br>
+                    
+                    <input type="checkbox" id="toppingTomatoes" name="toppings" value="tomatoes">
+                    <label for="toppingTomatoes" class="inline-label">Fresh Tomatoes</label><br>
+                    
+                    <input type="checkbox" id="toppingSpinach" name="toppings" value="spinach">
+                    <label for="toppingSpinach" class="inline-label">Spinach</label><br>
+                    
+                    <input type="checkbox" id="toppingJalapenos" name="toppings" value="jalapenos">
+                    <label for="toppingJalapenos" class="inline-label">Jalapeños</label><br>
+                    
+                    <input type="checkbox" id="toppingPineapple" name="toppings" value="pineapple">
+                    <label for="toppingPineapple" class="inline-label">Pineapple</label>
+                </div>
+            </fieldset>
+
+            <!-- Delivery Options Section -->
+            <fieldset>
+                <legend>Order Type</legend>
+                
+                <label>How would you like to receive your order? <span style="color: red;">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="orderDelivery" name="orderType" value="delivery" checked required>
+                    <label for="orderDelivery" class="inline-label">Delivery (We'll bring it to you!)</label><br>
+                    
+                    <input type="radio" id="orderPickup" name="orderType" value="pickup">
+                    <label for="orderPickup" class="inline-label">Take-Out / Pickup (You pick it up)</label><br>
+                    
+                    <input type="radio" id="orderDineIn" name="orderType" value="dinein">
+                    <label for="orderDineIn" class="inline-label">Dine-In (Eat at our restaurant)</label>
+                </div>
+
+                <label for="deliveryDate">Preferred Delivery/Pickup Date:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate">
+                
+                <label for="deliveryTime">Preferred Time:</label>
+                <input type="time" id="deliveryTime" name="deliveryTime">
+            </fieldset>
+
+            <!-- Special Instructions Section -->
+            <fieldset>
+                <legend>Special Instructions</legend>
+                
+                <label for="specialInstructions">Any special requests or dietary restrictions?</label>
+                <textarea id="specialInstructions" name="specialInstructions" rows="4" placeholder="Example: Please cut into squares, extra napkins, ring doorbell twice, allergies, etc."></textarea>
+                
+                <label for="favoriteColor">Favorite Color (for custom box decoration):</label>
+                <input type="color" id="favoriteColor" name="favoriteColor" value="#d32f2f">
+            </fieldset>
+
+            <!-- Promotional Section -->
+            <fieldset>
+                <legend>Promotions & Updates</legend>
+                
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter" class="inline-label">Sign me up for weekly deals and promotions!</label><br>
+                
+                <input type="checkbox" id="textAlerts" name="textAlerts" value="yes">
+                <label for="textAlerts" class="inline-label">Send me text alerts when my order is ready</label>
+            </fieldset>
+
+            <!-- Order Progress Indicator -->
+            <fieldset>
+                <legend>Order Completion</legend>
+                <label for="orderProgress">Form Completion Progress:</label>
+                <progress id="orderProgress" max="100" value="85">85%</progress>
+                <p style="font-size: 14px; color: #666;">You're almost done! Just review and submit your order.</p>
+            </fieldset>
+
+            <!-- Form Submission Buttons -->
+            <div class="button-group">
+                <button type="submit">🍕 Place Order</button>
+                <button type="reset">🔄 Clear Form</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2025 The HTML Pizza Company. All rights reserved.</p>
+        <p>📞 Call us: (555) 123-4567 | 📧 Email: orders@htmlpizza.com</p>
+        <p>🕒 Open Daily: 11:00 AM - 11:00 PM</p>
+    </footer>
+
+    <!-- JavaScript for interactive elements -->
+    <script>
+        // Update cheese amount display
+        const cheeseSlider = document.getElementById('cheeseAmount');
+        const cheeseOutput = document.getElementById('cheeseOutput');
+        cheeseSlider.addEventListener('input', function() {
+            cheeseOutput.textContent = this.value;
+        });
+
+        // Form validation and progress update
+        const form = document.getElementById('pizzaOrderForm');
+        const progressBar = document.getElementById('orderProgress');
+        
+        form.addEventListener('change', function() {
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let filled = 0;
+            inputs.forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    if (input.checked) filled++;
+                } else if (input.value) {
+                    filled++;
+                }
+            });
+            const progress = Math.min(100, Math.round((filled / inputs.length) * 100));
+            progressBar.value = progress;
+        });
+
+        // Form submission handler
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order! Your delicious pizza will be ready soon. 🍕');
+        });
+    </script>
+</body>
+</html>
