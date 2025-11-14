@@ -4,60 +4,280 @@
 "The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements." (https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 */
 
+/* Global resets and best practices */
+/* 1) Use border-box sizing for predictable layouts */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Skip link - hidden by default, visible on focus for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 2) Normalize root margins and ensure full height */
+html, body { margin: 0; padding: 0; height: 100%; }
+
+/* Base typography and body styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Heading styles for consistent hierarchy */
+h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 1.5rem 0 0.75rem 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Paragraph styling for readability */
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+/* Code styling */
+code {
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+/* Small text styling */
+small {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* 3) Design tokens for layering and spacing */
+:root {
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1050;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+}
+
+/* 4) Accessible focus styles */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+
+/* 5) Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 6) Utility class for fixed headers with safe-area support */
+.fixed-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding-top: max(var(--space-3), env(safe-area-inset-top));
+  z-index: var(--z-fixed);
+}
+
+/* 7) A helper class to establish containing block for absolutely positioned children */
+.position-context { position: relative; }
+
+/* ------------------------------------------------------ */
+/* COURSE STEPS BELOW (kept with enhancements where relevant) */
+/* ------------------------------------------------------ */
+
+/* Header styling */
+header {
+  background-color: #f8f9fa;
+  padding: var(--space-4);
+  border-bottom: 2px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  margin: 0;
+  color: #1a1a1a;
+}
+
+/* Main content area styling */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  min-height: calc(100vh - 200px);
+}
+
+/* Footer styling */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: var(--space-4);
+  text-align: center;
+  border-top: 1px solid #34495e;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer small {
+  color: #bdc3c7;
+}
+
 /* STEP 1: Style the ASIDE element - change the background-color, and the width properties */
 aside {
-
+  /* Example styles to visualize positioning; adjust as needed for the exercise */
+  background-color: #f0f4ff;
+  width: min(22rem, 90vw);
+  padding: var(--space-3);
+  border: 1px solid #c9d6ff;
 }
 
 /* STEP 2: Change the position property of the ASIDE element - static | relative | absolute | sticky - proceed to STEP 2a below */
 
 /* STEP 2a: Postion static - this is the default, and the element is within the 'flow' of the page content */
 aside {
-
+  /* position: static; */
 }
 
 /* STEP 2b: Position relative - this leaves the element in the page 'flow', but allows you to offset it's position with the top, right, bottom, and left properties. */
 aside {
-
+  /* position: relative; */
+  /* top: 0.5rem; left: 1rem; */
 }
 
 /* STEP 2c: Position absolute - this removes the element from the page 'flow' (watch surrounding elements move in to take up the space that it occupied before), and allows you to place it with respect to the document window using the top, right, bottom, and left properties. Comment out the above top, right, bottom, and left properties and values. */
 aside {
-
+  /* position: absolute; */
+  /* Use responsive-friendly offsets when experimenting */
+  /* top: 5vh; right: 5vw; */
 }
 
 /* STEP 2d: Use a variety of values to place the element with respect to the document window in the above CSS rule */
 
 /* STEP 3: Position sticky - this leaves the element within the document 'flow', but if the user scrolls down, it will stick to the top or bottom of the document window using a specified distance (top or bottom properties). Comment out the above top, right, bottom, and left properties and values, then experiment with this - be sure to reduce the width of the browser window to enable scrolling. */
 aside {
-
+  /* position: sticky; */
+  /* top: var(--space-3); */
+  /* z-index: var(--z-sticky); */
 }
 
 /* STEP 4: Positioning context - absolutely positioned elements are placed on the screen using the position of the next positioned ancestor. So… if a containing parent element is positioned (absolute or relative is set to any value at all), a positioned child will use the parent's position (top left corner, specifically) as a reference point. */
 
 /* STEP 4a: We are going to style the P element with the '?' inside it - comment out the above top, right, bottom, and left properties and values for the ASIDE, then position the ASIDE with absolute - place it 25px from the top, and 25px from the right of the document window (HTML element) */
 aside {
-
+  /* Example for the step (use one at a time when experimenting): */
+  /* position: absolute; top: 25px; right: 25px; */
 }
 
 aside p strong {
-	display: inline-block;
-	background-color: darkblue;
-	color: white;
-	font-size: 2em;
-	padding: 0.25em;
-	/* STEP 4b: Position the blue question mark box (ASIDE P STRONG) with absolute, and see how you can place it within the positioned ASIDE parent element, instead of the document window. */
-
+  display: inline-block;
+  background-color: darkblue;
+  color: white;
+  font-size: 2em;
+  padding: 0.25em;
+  /* STEP 4b: Position the blue question mark box (ASIDE P STRONG) with absolute, and see how you can place it within the positioned ASIDE parent element, instead of the document window. */
+  /* position: absolute; top: var(--space-2); right: var(--space-2); */
 }
 
 /* STEP 4c: Change the postion of the containing ASIDE element and watch the dark blue question mark move with it. */
 
 /* STEP 5a: Elements that are positioned have a vertical stacking order, z-index - set the HEADER element to position: absolute, with a background color of 'lightgoldenrodyellow' (seriously) */
 header {
-
+  /* position: absolute; */
+  /* background-color: lightgoldenrodyellow; */
 }
 /* STEP 5b: position the HEADER at the top right of the document window - since it is earlier in the code source order, it is rendered underneath the later ASIDE element */
 
 /* STEP 5c: Set the z-index of the HEADER to '2' - z-index can be anywhere from 0-999 */
 
 /* STEP 5d: Set the z-index of the ASIDE to '3' - observe the result in the browser - and we're all done! */
+
+/* Example layering using tokens (uncomment during the exercise): */
+/* header { position: absolute; top: 0; right: 0; z-index: var(--z-base); } */
+/* aside { position: absolute; top: 3rem; right: 1rem; z-index: calc(var(--z-base) + 1); } */
+
+/* ------------------------------------------------------ */
+/* PRINT STYLESHEET */
+/* ------------------------------------------------------ */
+
+@media print {
+  /* Hide elements that shouldn't print */
+  .skip-link,
+  aside {
+    display: none;
+  }
+
+  /* Optimize body for printing */
+  body {
+    background-color: #fff;
+    color: #000;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Ensure main content is readable */
+  main {
+    max-width: 100%;
+    padding: 0;
+    min-height: auto;
+  }
+
+  /* Optimize headings for print */
+  h1, h2 {
+    page-break-after: avoid;
+    color: #000;
+  }
+
+  /* Prevent page breaks within paragraphs */
+  p {
+    orphans: 3;
+    widows: 3;
+    page-break-inside: avoid;
+  }
+
+  /* Style footer for print */
+  footer {
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #000;
+    page-break-before: avoid;
+  }
+
+  /* Ensure links are visible in print */
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+}
