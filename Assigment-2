@@ -350,3 +350,40 @@
 
         <div class="content-section">
             <p class="tagline">"The dark side is calling"</p>
+            <section class="cast-section">
+                <h2>Starring</h2>
+                <div class="cast-grid">
+                    <div class="cast-member">
+                        <strong>Ewan McGregor</strong>
+                        <span>as Obi-Wan Kenobi</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Hayden Christensen</strong>
+                        <span>as Anakin Skywalker / Darth Vader</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Natalie Portman</strong>
+                        <span>as Padmé Amidala</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Ian McDiarmid</strong>
+                        <span>as Supreme Chancellor Palpatine</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Samuel L. Jackson</strong>
+                        <span>as Mace Windu</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Christopher Lee</strong>
+                        <span>as Count Dooku</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Frank Oz</strong>
+                        <span>as the voice of Yoda</span>
+                    </div>
+                    <div class="cast-member">
+                        <strong>Jimmy Smits</strong>
+                        <span>as Bail Organa</span>
+                    </div>
+                </div>
+            </section>
