@@ -339,3 +339,14 @@
         }
     </style>
 </head>
+<body>
+    <div class="poster-container">
+        <div class="hero-section">
+            <div class="title-wrapper">
+                <h1 class="star-wars-logo">STAR<br>WARS</h1>
+                <p class="revenge-title">REVENGE OF THE SITH</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <p class="tagline">"The dark side is calling"</p>
