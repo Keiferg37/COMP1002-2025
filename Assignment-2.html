@@ -117,7 +117,7 @@
             color: #4a5568;
             -webkit-text-stroke: 4px #7a8a9a;
             text-shadow: 0 0 40px rgba(150, 180, 200, 0.4),
-                0 5px 15px rgba(0, 0, 0, 0.9), inset 0 -2px 5px rgba(255, 255, 255, 0.1);
+                0 5px 15px rgba(0, 0, 0, 0.9);
             margin: 0;
             text-transform: uppercase;
             font-weight: 400;
@@ -344,6 +344,18 @@
             text-transform: uppercase;
         }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         footer {
             margin-top: 60px;
             text-align: center;
@@ -427,7 +439,9 @@
                     </div>
                 </div>
             </section>
-            <article class="synopsis">
+
+            <div class="synopsis">
+                <h2 class="visually-hidden">Synopsis</h2>
                 <p>
                     Years after the onset of the Clone Wars, the noble Jedi Knights
                     lead a massive clone army into a galaxy-wide battle against the
@@ -440,25 +454,29 @@
                     are Anakin's own offspring – the twin children born in secrecy who
                     will grow up to become heroes.
                 </p>
-            </article>
-            <section class="quote-section">
+            </div>
+
+            <div class="quote-section">
+                <h2 class="visually-hidden">Critical Reviews</h2>
                 <blockquote>
                     "A thunderous culmination of sound, color and digital fury... the
                     Passion of the Sith. It has the fascination and the beauty of a
                     brand-new car accident."
                 </blockquote>
                 <cite>— Anthony Lane, The New Yorker</cite>
-            </section>
+            </div>
 
-            <section class="quote-section">
+            <div class="quote-section">
                 <blockquote>
                     "Lucas wraps up his prequel trilogy with a stunning display of how
                     far digital filmmaking has come. A visual effects extravaganza that
                     delivers emotional gravitas."
                 </blockquote>
                 <cite>— Roger Ebert, Chicago Sun-Times</cite>
-            </section>
-            <section class="crew-info">
+            </div>
+
+            <div class="crew-info">
+                <h2 class="visually-hidden">Production Crew</h2>
                 <p><strong>Written and Directed by</strong> George Lucas</p>
                 <p><strong>Produced by</strong> Rick McCallum</p>
                 <p><strong>Executive Producer</strong> George Lucas</p>
@@ -469,7 +487,8 @@
                 <p><strong>Visual Effects Supervisor</strong> John Knoll</p>
                 <p><strong>Animation Director</strong> Rob Coleman</p>
                 <p><strong>Sound Designer</strong> Ben Burtt</p>
-            </section>
+            </div>
+
             <div class="links">
                 <a href="https://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith" target="_blank" rel="noopener">Official Website</a>
                 <a href="https://www.rottentomatoes.com/m/star_wars_episode_iii_revenge_of_the_sith" target="_blank" rel="noopener">Read Reviews</a>
