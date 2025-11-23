@@ -415,3 +415,20 @@
                 <p><strong>Animation Director</strong> Rob Coleman</p>
                 <p><strong>Sound Designer</strong> Ben Burtt</p>
             </section>
+            <div class="links">
+                <a href="https://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith" target="_blank" rel="noopener">Official Website</a>
+                <a href="https://www.rottentomatoes.com/m/star_wars_episode_iii_revenge_of_the_sith" target="_blank" rel="noopener">Read Reviews</a>
+                <a href="https://www.imdb.com/title/tt0121766/" target="_blank" rel="noopener">IMDb Page</a>
+            </div>
+
+            <p class="rating">Rated PG-13 | 140 Minutes</p>
+
+            <footer>
+                <p>&copy; 2005 Lucasfilm Ltd. &amp; TM. All Rights Reserved.</p>
+                <p>Star Wars and related properties are trademarks in the United States and other countries.</p>
+                <p>This is a student project created for educational purposes.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
