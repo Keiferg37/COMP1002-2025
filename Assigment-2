@@ -7,3 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: radial-gradient(ellipse at top, #3d0000 0%, #1a0000 50%, #000000 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #ffffff;
+            position: relative;
+        }
