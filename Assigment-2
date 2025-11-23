@@ -28,3 +28,15 @@
             color: #ffffff;
             position: relative;
         }
+        
+        .poster-container {
+            background: 
+                radial-gradient(ellipse at 50% 30%, rgba(180, 30, 0, 0.4) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 70%, rgba(200, 40, 0, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(60, 0, 0, 0.95) 0%, rgba(30, 0, 0, 0.98) 50%, rgba(10, 0, 0, 0.99) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            box-shadow: 0 0 100px rgba(200, 0, 0, 0.6), 
+                        inset 0 0 200px rgba(0, 0, 0, 0.8);
+        }
