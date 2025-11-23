@@ -403,3 +403,15 @@
                 </blockquote>
                 <cite>— Roger Ebert, Chicago Sun-Times</cite>
             </section>
+            <section class="crew-info">
+                <p><strong>Written and Directed by</strong> George Lucas</p>
+                <p><strong>Produced by</strong> Rick McCallum</p>
+                <p><strong>Executive Producer</strong> George Lucas</p>
+                <p><strong>Director of Photography</strong> David Tattersall, BSC</p>
+                <p><strong>Production Designer</strong> Gavin Bocquet</p>
+                <p><strong>Original Music by</strong> John Williams</p>
+                <p><strong>Film Editing by</strong> Roger Barton and Ben Burtt</p>
+                <p><strong>Visual Effects Supervisor</strong> John Knoll</p>
+                <p><strong>Animation Director</strong> Rob Coleman</p>
+                <p><strong>Sound Designer</strong> Ben Burtt</p>
+            </section>
