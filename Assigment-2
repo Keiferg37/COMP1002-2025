@@ -298,3 +298,44 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 30px rgba(220, 20, 60, 0.7);
         }
+        .rating {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            line-height: 2;
+            letter-spacing: 1px;
+            padding: 30px 40px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .star-wars-logo {
+                font-size: 80px;
+                letter-spacing: 4px;
+            }
+            
+            .revenge-title {
+                font-size: 36px;
+                letter-spacing: 10px;
+            }
+            
+            .cast-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-section {
+                min-height: 500px;
+            }
+        }
+    </style>
+</head>
