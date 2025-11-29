@@ -1,7 +1,7 @@
 // IMPORTANT: Before you start, be sure to customize all href="" values within the server include PHP files so your site navigation works
 
 // STEP 1: Begin by adding a SCRIPT element to 'red/gallery.html' that refers to this EXTERNAL JavaScript File
-<script src="../js/gallery.js" defer></script>
+// <script src="../js/gallery.js" defer></script> 
 // STEP 2a: Grab the UL for #blockGallery and assign it to the variable 'blockGallery' - but use document.getElementById this time
 const blockGallery = document.getElementById("blockGallery");
 
