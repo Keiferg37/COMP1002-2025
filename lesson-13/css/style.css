@@ -1,13 +1,21 @@
 @charset "utf-8";
 /* Basic layout styles */
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
 body {
 	background: black;
 	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
 }
 #container {
 	background: #ccc;
 	width: 80%;
-	margin: 0 auto;
+	margin: 0 auto 0 auto;
 	padding: 2.5%;
 }
 header, section, footer {
@@ -20,27 +28,58 @@ main {
 	flex-direction: column;
 }
 
-
 /* STEP 4: Add styles to visually communicate that this is a small screen - use the ::after psuedoelement and the content property to add some text after the H1 */
 
 /* Smartphone/small screen styles */
-
+h1::after {
+	content: " (Small)";
+}
+#container {
+	background-color: #88cff1;
+}
 /* STEP 5: Edit the above CSS to set the background color of the #container to lightblue */
 
 /* STEP 6a: Add a media query to target medium window sizes (tablets) that are a minimum of 481px */
-
+@media screen and (min-width: 481px) {
 	/* Tablets/medium screen styles */
-
+	h1::after {
+		content: " (Medium)";
+	}
+	#container {
+		background-color: #e3ab54;
+	}
+	main {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	/* The first SECTION element inside the MAIN should stretch all the way across the page layout container */
-
+main section:nth-of-type(1) {
+	flex-basis: 100%;
+}
 	/* The second and third SECTION elements should sit side-by-side - remember the box model when setting the width with flex-basis */
-
+	main section:nth-of-type(2), main section:nth-of-type(3) {
+		flex-basis: 50%;
+	}
+}
 /* STEP 6b: Edit the above CSS to set the background color of #container to orange and arrange the page in 2-column layout with the first section on top of the second and third sections (using flexbox) */
 
 /* STEP 7a: Add another media query to target only screens 1025px or larger (notebooks and desktops)*/
-
+@media screen and (min-width: 1024px), (orientation: landscape) {
 	/* Desktops/large screen styles */
-
+	h1::after {
+		content: " (Large)";
+	}
+	#container {
+		background-color: #d027d8;
+	}
+	main {
+		flex-wrap: nowrap;
+		font-size: 0.8rem;
+	}
+	main section:nth-of-type(n) {
+		flex-basis: auto;
+	}
+}
 /* STEP 7b: Edit the above CSS to set the background color of #container to olive and arrange the page in a 3-column layout (using flexbox) */
 
 /* STEP 8: Add an OR conditional (,) to the above media query that applies the above CSS if the device is being held in landscape orientation, rather than portrait */
