@@ -88,6 +88,7 @@ li {
 
 /* Images */
 img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
@@ -235,8 +236,11 @@ section {
 }
 
 .feature-image {
-    margin: 2rem auto;
+    width: 100%;
     max-width: 600px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
 }
 
 .feature-intro {
@@ -587,8 +591,11 @@ details[open] .faq-question {
 
 .about-hero-image,
 .corporate-hero-image {
+    width: 100%;
     max-width: 700px;
+    height: auto;
     margin: 2rem auto;
+    display: block;
 }
 
 .about-section,
