@@ -1,0 +1,340 @@
+/* Métis Sash Micro-Site Styles */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: ;
+    --secondary-color: ;
+    --accent-color: ;
+    --text-color: ;
+    --background-color: ;
+    --border-color: ;
+}
+
+/* Base Styles */
+body {
+    font-family: ;
+    font-size: ;
+    line-height: ;
+    color: ;
+    background-color: ;
+}
+
+/* Typography */
+h1 {
+    font-size: ;
+    font-weight: ;
+    line-height: ;
+}
+
+h2 {
+    font-size: ;
+    font-weight: ;
+    line-height: ;
+    margin-bottom: ;
+}
+
+h3 {
+    font-size: ;
+    font-weight: ;
+    line-height: ;
+    margin-bottom: ;
+}
+
+p {
+    margin-bottom: ;
+}
+
+/* Links */
+a {
+    text-decoration: ;
+    color: ;
+}
+
+a:hover {
+    color: ;
+}
+
+a:focus {
+    outline: ;
+}
+
+/* Lists */
+ul {
+    list-style: ;
+}
+
+ol {
+    list-style: ;
+}
+
+li {
+    margin-bottom: ;
+}
+
+/* Images */
+img {
+    max-width: ;
+    height: ;
+    display: ;
+}
+
+/* Header Styles */
+.site-header {
+    padding: ;
+    background-color: ;
+}
+
+.site-title {
+    margin-bottom: ;
+}
+
+/* Navigation Styles */
+.main-nav {
+    
+}
+
+.nav-list {
+    display: ;
+    gap: ;
+}
+
+.nav-item {
+    
+}
+
+.nav-link {
+    padding: ;
+    display: ;
+}
+
+.nav-link:hover {
+    
+}
+
+/* Main Content */
+.main-content {
+    padding: ;
+    max-width: ;
+    margin: ;
+}
+
+/* Sections */
+section {
+    margin-bottom: ;
+    padding: ;
+}
+
+.section-heading {
+    margin-bottom: ;
+}
+
+.section-subheading {
+    margin-bottom: ;
+}
+
+.section-text {
+    margin-bottom: ;
+}
+
+/* Hero Section */
+.hero-section {
+    
+}
+
+.hero-image {
+    margin-bottom: ;
+}
+
+.hero-text {
+    
+}
+
+/* Features Section */
+.features-section {
+    
+}
+
+.feature-image {
+    margin-bottom: ;
+}
+
+.feature-list {
+    
+}
+
+.feature-item {
+    
+}
+
+/* Gallery Section */
+.gallery-section {
+    
+}
+
+.image-gallery {
+    display: ;
+    gap: ;
+}
+
+.gallery-image {
+    
+}
+
+/* Form Styles */
+.feedback-form {
+    
+}
+
+.form-group {
+    margin-bottom: ;
+}
+
+.form-label {
+    display: ;
+    margin-bottom: ;
+    font-weight: ;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: ;
+    padding: ;
+    border: ;
+    border-radius: ;
+    font-family: ;
+    font-size: ;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: ;
+    border-color: ;
+}
+
+.form-textarea {
+    resize: ;
+}
+
+.form-button {
+    padding: ;
+    background-color: ;
+    color: ;
+    border: ;
+    border-radius: ;
+    font-size: ;
+    cursor: ;
+}
+
+.form-button:hover {
+    background-color: ;
+}
+
+/* Testimonials */
+.testimonials-section {
+    
+}
+
+.testimonial {
+    margin-bottom: ;
+    padding: ;
+    border: ;
+}
+
+.testimonial-image {
+    width: ;
+    height: ;
+    border-radius: ;
+    margin-bottom: ;
+}
+
+.testimonial-name {
+    
+}
+
+.testimonial-rating {
+    
+}
+
+.testimonial-text {
+    
+}
+
+/* FAQ Section */
+.faq-section {
+    
+}
+
+.faq-item {
+    margin-bottom: ;
+    border: ;
+    padding: ;
+}
+
+.faq-question {
+    font-weight: ;
+    cursor: ;
+}
+
+.faq-answer {
+    margin-top: ;
+}
+
+/* Contact Section */
+.contact-section {
+    
+}
+
+.contact-list {
+    
+}
+
+.contact-item {
+    margin-bottom: ;
+}
+
+/* Contact Info (Definition List) */
+.contact-info {
+    
+}
+
+.contact-label {
+    font-weight: ;
+    margin-bottom: ;
+}
+
+.contact-detail {
+    margin-bottom: ;
+    margin-left: ;
+}
+
+/* Footer Styles */
+.site-footer {
+    padding: ;
+    background-color: ;
+    text-align: ;
+    margin-top: ;
+}
+
+.footer-text {
+    
+}
+
+/* Article Styles */
+.about-article,
+.corporate-article {
+    
+}
+
+/* Utility Classes */
+.page-heading {
+    margin-bottom: ;
+}
