@@ -215,7 +215,7 @@ section {
 }
 
 .hero-image {
-    margin-bottom: 2rem auto;
+    margin: 2rem auto;
     max-width: 800px;
     border: 6px solid var(--accent-color);
 }
