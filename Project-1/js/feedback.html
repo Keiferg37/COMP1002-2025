@@ -7,38 +7,38 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"></a></li>
-                <li><a href="about.html"></a></li>
-                <li><a href="feedback.html"></a></li>
-                <li><a href="support.html"></a></li>
-                <li><a href="corporate.html"></a></li>
+    <header class="site-header">
+        <h1 class="site-title"></h1>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link"></a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link"></a></li>
+                <li class="nav-item"><a href="feedback.html" class="nav-link"></a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link"></a></li>
+                <li class="nav-item"><a href="corporate.html" class="nav-link"></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2></h2>
-            <p></p>
+    <main class="main-content">
+        <section class="feedback-form-section">
+            <h2 class="section-heading"></h2>
+            <p class="form-intro"></p>
             
-            <form>
-                <div>
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name">
+            <form id="feedback-form" class="feedback-form">
+                <div class="form-group">
+                    <label for="name" class="form-label"></label>
+                    <input type="text" id="name" name="name" class="form-input">
                 </div>
 
-                <div>
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email">
+                <div class="form-group">
+                    <label for="email" class="form-label"></label>
+                    <input type="email" id="email" name="email" class="form-input">
                 </div>
 
-                <div>
-                    <label for="rating"></label>
-                    <select id="rating" name="rating">
+                <div class="form-group">
+                    <label for="rating" class="form-label"></label>
+                    <select id="rating" name="rating" class="form-select">
                         <option value=""></option>
                         <option value="5"></option>
                         <option value="4"></option>
@@ -48,42 +48,42 @@
                     </select>
                 </div>
 
-                <div>
-                    <label for="comments"></label>
-                    <textarea id="comments" name="comments" rows="5"></textarea>
+                <div class="form-group">
+                    <label for="comments" class="form-label"></label>
+                    <textarea id="comments" name="comments" rows="5" class="form-textarea"></textarea>
                 </div>
 
-                <div>
-                    <button type="submit"></button>
+                <div class="form-group">
+                    <button type="submit" class="form-button"></button>
                 </div>
             </form>
         </section>
 
-        <section>
-            <h2></h2>
-            <article>
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-                <p></p>
+        <section class="testimonials-section">
+            <h2 class="section-heading"></h2>
+            <article class="testimonial">
+                <img src="" alt="" class="testimonial-image">
+                <h3 class="testimonial-name"></h3>
+                <p class="testimonial-rating"></p>
+                <p class="testimonial-text"></p>
             </article>
-            <article>
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-                <p></p>
+            <article class="testimonial">
+                <img src="" alt="" class="testimonial-image">
+                <h3 class="testimonial-name"></h3>
+                <p class="testimonial-rating"></p>
+                <p class="testimonial-text"></p>
             </article>
-            <article>
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-                <p></p>
+            <article class="testimonial">
+                <img src="" alt="" class="testimonial-image">
+                <h3 class="testimonial-name"></h3>
+                <p class="testimonial-rating"></p>
+                <p class="testimonial-text"></p>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p></p>
+    <footer class="site-footer">
+        <p class="footer-text"></p>
     </footer>
 
     <script src="js/script.js"></script>
